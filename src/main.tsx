@@ -1,14 +1,21 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 //Scene Setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.position.z = 25;
+camera.position.y = 15;
 
+//renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
+
+//load 3D-Models
+
+
 
 //skybox
 const cubeGeometry = new THREE.BoxGeometry(1000, 1000, 1000);
